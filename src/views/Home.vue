@@ -1,29 +1,48 @@
-<script setup>
-import ButtonRepo from '@/components/ButtonRepo.vue';
-</script>
-
 <template>
-    <div class="bg-gray-50">
-        <div
-            class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between"
-        >
-            <h2
-                class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-            >
-                Ready to dive in?
-                <br />
-                <span class="text-indigo-600">Vite + Vue 3 + Tailwind CSS</span>
-            </h2>
-            <div class="flex mt-8 lg:flex-shrink-0 lg:mt-0">
-                <div class="inline-flex rounded-md shadow">
-                    <router-link
-                        to="/about"
-                        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none"
-                        >Next Page</router-link
-                    >
+    <section class="pt-12 space-y-8">
+        <h1 class="text-6xl text-center text-white">Yo, Replicant!</h1>
+        <p class="text-2xl text-center text-slate-100">Whatcha tryin to do {{ timeOfDay }}!?</p>
+    </section>
+    <section class="grid max-w-6xl grid-cols-2 gap-8 px-6 mx-auto mt-16">
+        <router-link to="/setlist">
+            <div class="overflow-hidden bg-white divide-y divide-gray-200 rounded-lg shadow">
+                <div>
+                    <img
+                        src="https://res.cloudinary.com/observatory-agency/image/upload/v1640046489/replicant/Live%20Photos/mike_b4r1ya.jpg"
+                        alt="Playin gigs"
+                        class="object-cover object-center w-full h-96"
+                    />
                 </div>
-                <ButtonRepo />
+                <div class="px-4 py-4 sm:px-6">
+                    <h2 class="text-2xl text-slate-900">Learn dat 🔥🔥🔥 setlist for next year!</h2>
+                </div>
             </div>
-        </div>
-    </div>
+        </router-link>
+        <router-link to="/studio">
+            <div class="overflow-hidden bg-white divide-y divide-gray-200 rounded-lg shadow">
+                <div>
+                    <img
+                        src="https://res.cloudinary.com/observatory-agency/image/upload/v1640046518/replicant/Live%20Photos/james-studio_xysazi.jpg"
+                        alt="Playin gigs"
+                        class="object-cover object-center w-full h-96"
+                    />
+                </div>
+                <div class="px-4 py-4 sm:px-6">
+                    <h2 class="text-2xl text-slate-900">
+                        Work on da new wiggly bois 🐡🐡🐡 for LP3!
+                    </h2>
+                </div>
+            </div>
+        </router-link>
+    </section>
 </template>
+
+<script>
+export default {
+    setup() {
+        return {
+            timeOfDay: new Date().getHours() < 12 ? 'today' : 'tonight'
+        };
+    }
+};
+</script>
