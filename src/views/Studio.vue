@@ -33,6 +33,24 @@ export default {
                     file:
                         'https://res.cloudinary.com/observatory-agency/video/upload/v1640038835/replicant/lp3/Sethian_fm4stm.mp3',
                     howl: null
+                },
+                {
+                    name: 'Voluntary Extinction',
+                    file:
+                        'https://res.cloudinary.com/observatory-agency/video/upload/v1640144426/replicant/lp3/Voluntary_Extinction_oveusy.mp3',
+                    howl: null
+                },
+                {
+                    name: 'Bred for a Nonexistent Future',
+                    file:
+                        'https://res.cloudinary.com/observatory-agency/video/upload/v1640144428/replicant/lp3/Bred_for_a_Nonexistent_Future_hlsmr3.mp3',
+                    howl: null
+                },
+                {
+                    name: 'Intrusive Thoughts',
+                    file:
+                        'https://res.cloudinary.com/observatory-agency/video/upload/v1640144553/replicant/lp3/Intrusive_Thoughts_ugplxg.mp3',
+                    howl: null
                 }
             ]
         };
