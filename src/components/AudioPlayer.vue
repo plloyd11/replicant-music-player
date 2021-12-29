@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-between w-full pt-12 bg-slate-800">
-        <div class="relative z-10 flex flex-row justify-center w-full">
+        <div class="relative z-10 flex flex-col justify-center w-full md:flex-row">
             <div class="flex flex-col w-full rounded-lg bg-slate-800 md:w-5/12">
                 <div class="w-4/5 m-auto mt-4 mb-0">
                     <div class="relative m-auto">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden w-7/12 md:block">
+            <div class="md:w-7/12">
                 <ul
                     class="w-full pt-2 m-auto mb-2 space-y-3 overflow-auto bg-slate-800"
                     style="max-height:100%"
@@ -163,7 +163,7 @@
             </div>
         </div>
         <div
-            class="fixed bottom-0 z-10 flex w-full py-5 bg-gradient-to-r from-slate-300 to-slate-400"
+            class="bottom-0 z-10 flex w-full py-5 md:fixed bg-gradient-to-r from-slate-300 to-slate-400"
         >
             <div class="flex items-center justify-around w-11/12 mx-auto">
                 <div
@@ -211,7 +211,7 @@
 
                 <div class="flex items-center w-1/5 m-auto md:w-2/12">
                     <div
-                        class="w-3/12 rounded-full md:w-2/12 hover:bg-slate-500 md:p-1"
+                        class="w-3/12 ml-auto rounded-full md:w-2/12 hover:bg-slate-500 md:p-1"
                         @click="mute()"
                     >
                         <svg
@@ -252,7 +252,7 @@
                             />
                         </svg>
                     </div>
-                    <div class="relative w-9/12 m-auto md:w-10/12">
+                    <div class="relative hidden w-9/12 m-auto md:block md:w-10/12">
                         <div
                             @click="volume($event)"
                             ref="volBar"
