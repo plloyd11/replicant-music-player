@@ -6,7 +6,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"Fira Code"', ...defaultTheme.fontFamily.sans]
+                sans: ['Space Grotesk', ...defaultTheme.fontFamily.sans]
             }
         }
     },

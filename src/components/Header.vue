@@ -1,4 +1,4 @@
-<template>
+<template v-if="authIsReady">
     <header class="flex-auto bg-slate-900">
         <nav class="px-4 mx-auto sm:px-6 lg:px-8" aria-label="Top">
             <div
@@ -13,7 +13,7 @@
                             alt="Replicant Logo"
                         />
                     </router-link>
-                    <div class="hidden ml-10 space-x-8 lg:block">
+                    <div v-if="user" class="hidden ml-10 space-x-8 lg:block">
                         <router-link
                             v-for="link in navigation"
                             :key="link.name"
@@ -24,39 +24,60 @@
                         </router-link>
                     </div>
                 </div>
-                <div class="ml-10 space-x-4">
-                    <a
+                <!-- If logged in -->
+                <div v-if="user" class="flex items-center ml-10 space-x-4">
+                    <button
                         href="#"
                         class="inline-block px-4 py-2 text-base font-medium text-white border border-transparent rounded-md bg-cyan-700 hover:bg-opacity-75"
-                        >Logout</a
+                        @click="logout"
                     >
+                        Logout
+                    </button>
+                </div>
+                <!-- If logged out -->
+                <div v-if="!user" class="flex ml-10 space-x-4">
+                    <router-link
+                        to="/login"
+                        class="inline-block px-4 py-2 text-base font-medium text-white border border-transparent rounded-md bg-cyan-700 hover:bg-opacity-75"
+                    >
+                        Login
+                    </router-link>
+                    <router-link
+                        to="/signup"
+                        class="inline-block px-4 py-2 text-base font-medium text-white border border-transparent rounded-md bg-cyan-700 hover:bg-opacity-75"
+                    >
+                        Sign Up
+                    </router-link>
                 </div>
             </div>
-            <div class="flex flex-wrap justify-center py-4 space-x-6 lg:hidden">
-                <a
+            <div class="flex flex-wrap justify-center py-4 space-x-6 lg:hidden" v-if="user">
+                <router-link
                     v-for="link in navigation"
                     :key="link.name"
-                    :href="link.href"
+                    :to="link.href"
                     class="text-base font-medium text-white hover:text-cyan-50"
                 >
                     {{ link.name }}
-                </a>
+                </router-link>
             </div>
         </nav>
     </header>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+
 const navigation = [
     { name: 'Setlist', href: '/setlist' },
     { name: 'Studio', href: '/studio' }
 ];
 
-export default {
-    setup() {
-        return {
-            navigation
-        };
-    }
+const store = useStore();
+const user = computed(() => store.state.user);
+const authIsReady = computed(() => store.state.authIsReady);
+
+const logout = () => {
+    store.dispatch('logout');
 };
 </script>

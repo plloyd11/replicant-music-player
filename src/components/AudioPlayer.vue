@@ -545,7 +545,7 @@ export default {
 
 <style>
 * {
-    font-family: 'Fira Code', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 #journal-scroll::-webkit-scrollbar {
     width: 4px;
