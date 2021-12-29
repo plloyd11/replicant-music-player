@@ -79,5 +79,6 @@ const authIsReady = computed(() => store.state.authIsReady);
 
 const logout = () => {
     store.dispatch('logout');
+    router.push('/');
 };
 </script>
