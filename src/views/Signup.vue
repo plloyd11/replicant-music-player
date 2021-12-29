@@ -17,7 +17,7 @@
                             type="email"
                             autocomplete="email"
                             required
-                            class="relative block w-full p-3 text-gray-900 placeholder-gray-600 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10 sm:text-base"
+                            class="relative block w-full p-3 text-gray-900 placeholder-gray-600 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 focus:z-10 sm:text-base"
                             placeholder="Email address"
                             v-model="email"
                         />
@@ -30,7 +30,7 @@
                             type="password"
                             autocomplete="current-password"
                             required
-                            class="relative block w-full p-3 text-gray-900 placeholder-gray-600 border border-gray-300 rounded-none appearance-none rounded-b-md focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10 sm:text-base"
+                            class="relative block w-full p-3 text-gray-900 placeholder-gray-600 border border-gray-300 rounded-none appearance-none rounded-b-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 focus:z-10 sm:text-base"
                             placeholder="Password"
                             v-model="password"
                         />
@@ -38,11 +38,11 @@
                 </div>
 
                 <div class="flex items-center justify-between">
-                    <router-link to="/login" class="font-medium text-sky-600 hover:text-sky-500">
+                    <router-link to="/login" class="font-medium text-cyan-600 hover:text-cyan-500">
                         I have an account, assclown!
                     </router-link>
 
-                    <a href="#" class="font-medium text-sky-600 hover:text-sky-500">
+                    <a href="#" class="font-medium text-cyan-600 hover:text-cyan-500">
                         Forgot your password?
                     </a>
                 </div>
@@ -50,11 +50,11 @@
                 <div>
                     <button
                         type="submit"
-                        class="relative flex justify-center w-full px-4 py-2 text-lg font-medium text-white border border-transparent rounded-md bg-sky-600 group hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                        class="relative flex justify-center w-full px-4 py-2 text-lg font-medium text-white border border-transparent rounded-md bg-cyan-600 group hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                     >
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                             <svg
-                                class="w-5 h-5 text-sky-500 group-hover:text-sky-400"
+                                class="w-5 h-5 text-cyan-500 group-hover:text-cyan-400"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"

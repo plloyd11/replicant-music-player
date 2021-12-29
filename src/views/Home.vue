@@ -48,7 +48,7 @@
             <h1 class="text-2xl leading-relaxed text-center text-white sm:text-4xl">
                 Do you respect New Jersey? <br />
                 Prove yourself and
-                <router-link to="/login" class="underline text-sky-400">login</router-link>
+                <router-link to="/login" class="underline text-cyan-400">login</router-link>
             </h1>
         </section>
     </div>

@@ -14,3 +14,12 @@ export default {
     }
 };
 </script>
+
+<style>
+.linkz .router-link-exact-active {
+    color: #06b6d4;
+}
+.linkz .router-link-exact-active:hover {
+    color: #06b6d4;
+}
+</style>

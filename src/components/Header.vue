@@ -13,12 +13,12 @@
                             alt="Replicant Logo"
                         />
                     </router-link>
-                    <div v-if="user" class="hidden ml-10 space-x-8 lg:block">
+                    <div v-if="user" class="hidden ml-10 space-x-8 lg:block linkz">
                         <router-link
                             v-for="link in navigation"
                             :key="link.name"
                             :to="link.href"
-                            class="text-base font-medium text-white hover:text-cyan-50"
+                            class="text-xl text-white hover:text-cyan-50"
                         >
                             {{ link.name }}
                         </router-link>
@@ -27,7 +27,6 @@
                 <!-- If logged in -->
                 <div v-if="user" class="flex items-center ml-10 space-x-4">
                     <button
-                        href="#"
                         class="inline-block px-4 py-2 text-base font-medium text-white border border-transparent rounded-md bg-cyan-700 hover:bg-opacity-75"
                         @click="logout"
                     >
@@ -55,7 +54,7 @@
                     v-for="link in navigation"
                     :key="link.name"
                     :to="link.href"
-                    class="text-base font-medium text-white hover:text-cyan-50"
+                    class="text-base font-medium text-white hover:text-cyan-50 linkz"
                 >
                     {{ link.name }}
                 </router-link>
@@ -67,6 +66,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
 
 const navigation = [
     { name: 'Setlist', href: '/setlist' },
@@ -74,6 +74,7 @@ const navigation = [
 ];
 
 const store = useStore();
+const router = useRouter();
 const user = computed(() => store.state.user);
 const authIsReady = computed(() => store.state.authIsReady);
 

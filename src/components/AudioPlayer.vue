@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-between w-4/5 m-auto mt-8 mb-4">
-                    <div class="p-1 rounded-full text-grey-darker hover:bg-sky-900">
+                    <div class="p-1 rounded-full text-grey-darker hover:bg-cyan-900">
                         <svg
                             @click="random = !random"
                             :class="random ? 'text-cyan-500' : 'text-slate-50'"
@@ -26,7 +26,7 @@
                             />
                         </svg>
                     </div>
-                    <div class="p-1 rounded-full text-grey-darker hover:bg-sky-900">
+                    <div class="p-1 rounded-full text-grey-darker hover:bg-cyan-900">
                         <svg
                             @click="prevButton ? previous() : ''"
                             class="w-8 h-8 cursor-horns text-slate-50"
@@ -73,7 +73,7 @@
                             <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z" />
                         </svg>
                     </div>
-                    <div class="p-1 rounded-full text-grey-darker hover:bg-sky-900">
+                    <div class="p-1 rounded-full text-grey-darker hover:bg-cyan-900">
                         <svg
                             @click="nextButton ? next() : ''"
                             class="w-8 h-8 cursor-horns text-slate-50"
@@ -84,7 +84,7 @@
                             <path d="M13 5h3v10h-3V5zM4 5l9 5-9 5V5z" />
                         </svg>
                     </div>
-                    <div class="p-1 rounded-full text-grey-darker hover:bg-sky-900">
+                    <div class="p-1 rounded-full text-grey-darker hover:bg-cyan-900">
                         <svg
                             @click="repeat = !repeat"
                             :class="repeat ? 'text-cyan-500' : 'text-slate-50'"
