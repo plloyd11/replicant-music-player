@@ -61,6 +61,12 @@ const playlist = ref([
         file:
             'https://res.cloudinary.com/observatory-agency/video/upload/v1640144553/replicant/lp3/Intrusive_Thoughts_ugplxg.mp3',
         howl: null
-    }
+    },
+    {
+        name: 'Empty Years',
+        file:
+            'https://res.cloudinary.com/observatory-agency/video/upload/v1642810463/replicant/lp3/Empty-Years_z7l2yp.mp3',
+        howl: null
+    }    
 ]);
 </script>
